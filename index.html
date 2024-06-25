@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitación Mis Quince</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Gabriola&display=swap" 
+          rel="stylesheet"
+     />
+
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0; /*background: #f5f5f5;*/
+      }
+      h2 {
+        font-family: 'Edwardian Script ITC', cursive;
+        font-size: 3.5rem; /* Tamaño de fuente más grande */
+        color: #faf5f4; /* Color personalizado */
+      }
+      h1 {
+        font-family: 'Edwardian Script ITC', cursive;
+        font-size: 5.0rem; /* Tamaño de fuente más grande */
+        color: #dbd80d; /* Color personalizado */
+      }
+      h3 {
+        font-family: 'Edwardian Script ITC', cursive;
+        font-size: 4.5rem; /* Tamaño de fuente más grande */
+        color: #faf5f4; /* Color personalizado */
+      }
+      h5 {
+        font-family: 'Gabriola', cursive;
+        font-size: 4.0rem; /* Tamaño de fuente más grande */
+        color: #f7f0f5; /* Color personalizado */
+      }
+      p {
+        font-family: 'Gabriola', cursive; /* Cambia la fuente a Arial o a una fuente sans-serif genérica */
+        font-size: 2.0rem; /* Tamaño de fuente base */
+        line-height: 1.3; /* Altura de línea para mejorar la legibilidad */
+        color: #fdfdf8; /* Color de texto */
+      }
+      .bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      .content {
+        position: relative;
+        z-index: 1;
+        color: white;
+      }
+      .navbar {
+        background-color: #343a40;
+        margin-bottom: 30px;
+      }
+      .navbar .nav-link,
+      .navbar-brand {
+        color: #ffffff !important;
+      }
+      .collage img {
+        width: 75%;
+        height: auto;
+        border: 10px solid #f5f5f0;
+        margin-bottom: 15px;
+        clip-path: polygon(5% 0, 50% 0, 25% 25%, 0 25%);
+      }
+      
+      .qr-container,
+      .img-container {
+        max-width: 300px;
+        margin: 100px;
+      }
+      .qr-container img,
+      .img-container img {
+        width: 200px;
+        height: auto;
+        object-fit: cover;
+      }
+      .map-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+      }
+      .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .countdown {
+        font-size: 40px;
+        font-family: Gabriola;
+        color: #dc3545;
+      }
+      .whatsapp-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #25d366;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+      .whatsapp-button i {
+        margin-right: 5px;
+      }
+    .btn-primary-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #1f5eb1;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .btn-primary-button i {
+      margin-right: 5px;
+    }
+    </style>
+  </head>
+  <body>
+    <audio id="background-audio" loop>
+      <source src="music/m1.mp3" type="audio/mp3" />
+    </audio>
+    
+    <!-- Video de fondo -->
+    <video autoplay muted loop class="bg-video">
+      <source src="video/v4.mp4" type="video/mp4" />
+      <!-- Tu navegador no soporta la etiqueta de video. -->
+    </video>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">Invitación Mis Quince Años</a>
+      <a class="navbar-brand" href="#">Camila</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#MisQuince">Mis Quince Años</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#te-esperamos">Te Esperamos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#confirmanos">Confírmanos</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Plato de Comida">Elige Plato de Comida</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ubicacion">Ubicación</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Sección Mis Quince -->
+    <section
+      id="MisQuince"
+      class="container mb-4 section-bg animate__animated animate__fadeIn"
+    >
+      <p class="text-center">
+        Que nadie te menosprecie por ser joven. Al contrario, que los creyentes vean en ti un ejemplo
+        a seguir en la manera de hablar, en la conducta, en el amor, en la fe y en la pureza."
+      </p>
+      <p class="text-right">1 Timoteo 4:12</p>
+      <br /><br />
+      <h3 class="text-center">Isis Janeth Sosa & Luis Alberto Torres</h3>
+      <p class="text-center">
+        Tienen el Honor de Invitarles a celebrar este día tan especial
+      </p>
+      <br />
+      <div class="row justify-content-center mb-5">
+        <img
+          src="img/Imagen1.png"
+          alt="Mis Quince Años"
+          class="img-fluid"
+        />
+      </div>
+      <h1 class="text-center">Adriana Camila Torres Sosa</h1>
+    </section>
+    <br /><br /><br />
+    <!-- Sección Te Esperamos -->
+    <section
+      id="te-esperamos"
+      class="container mb-5 section-bg animate__animated animate__fadeIn text-center"
+    >
+      <h2>Te Esperamos</h2>
+      <p>
+        Iniciando con una misa de Acción de Gracias en la Parroquia Nuestra Señora de Guadalupe.
+      </p>
+      <br><br>
+      <p><h2 style="font-family: 'Gabriola', cursive; color: rgb(211, 208, 13)">
+        Sábado 06 de Julio del 2024  a las 6:30 pm
+      </h2></p>
+      <br><br>
+      <div id="countdown" class="countdown"></div>
+    </section>
+    <br /><br />
+    <!-- Sección Confírmanos -->
+    <section
+      id="confirmanos"
+      class="container mb-5 section-bg-alt animate__animated animate__fadeIn text-center"
+    >
+      <h2 style="font-family: 'Gabriola', cursive; color: rgb(211, 208, 13)">
+        Confírmanos
+      </h2>
+      <p style="font-family: 'Gabriola', cursive; color: rgb(246, 247, 241)">
+        Por favor confirma tu asistencia contactándonos:
+      </p>
+      <p style="font-family: 'Gabriola', cursive; color: rgb(1, 7, 10)">
+        <a href="https://wa.me/+50499301525" class="whatsapp-button">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </p>
+    </section>
+    <br><br>
+    <!-- Sección para elegir plato de comida -->
+<section 
+     id="Plato de Comida"
+     class="container mb-5 section-bg animate__animated animate__fadeIn text-center"
+     >
+  <h2>Elige tu plato de comida</h2>
+  <p>Por favor selecciona tu plato preferido para la celebración:
+  </p>
+  <p style="font-family: 'Gabriola', cursive; color: rgb(192, 14, 88)">
+  <a href="https://forms.gle/7jKQWtT75rsGuJCh7" class="btn-primary">
+    <i  class="fab fa-cutlery"></i> Elegir plato 
+  </a>
+</p>
+</section>
+<br>
+    <!-- Sección Ubicación -->
+    <section
+      id="ubicacion"
+      class="container mb-2 section-bg animate__animated animate__fadeIn"
+    >
+      <h2 class="text-center">Ubicación</h2>
+      <h5 class="text-center">Ceremonia en la Iglesia</h5>
+      <div class="row justify-content-center mb-2">
+        <div class="col-md-2 text-center qr-container">
+          <img
+            src="img/frame1.png"
+            alt="QR Code Iglesia"
+            class="img-fluid"
+          />
+          <p>
+            Escanea el código QR para ver la ubicación de la ceremonia en Google Maps.
+          </p>
+        </div>
+        <div class="col-md-2 text-center img-container">
+          <img
+            src="img/i4.jfif"
+            alt="Imagen de la Iglesia"
+            class="img-fluid"
+          />
+          <p>
+            Parroquia Nuestra Señora de Guadalupe, Tegucigalpa, Francisco Morazán.
+          </p>
+        </div>
+      </div>
+      <h5 class="text-center">Recepción</h5>
+      <div class="row justify-content-center">
+        <div class="col-md-2 text-center qr-container">
+          <img
+            src="img/frame.png"
+            alt="QR Code Recepción"
+            class="img-fluid"
+          />
+          <p>
+            Escanea el código QR para ver la ubicación de la ceremonia en Google Maps.
+          </p>
+        </div>
+        <div class="col-md-2 text-center img-container">
+          <img
+            src="img/i3.jpeg"
+            alt="Imagen del Lugar de Recepción"
+            class="img-fluid"
+          />
+          <p>
+            Salón el Mirador, Desvío el Hatillo, desvío a la Cumbre, Kilómetro 8, circuito el bosque,
+            Tegucigalpa, Honduras.
+          </p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <h5
+          class="text-center"
+          style="font-family: 'Edwardian Script ITC', cursive; color: rgb(209, 206, 13)"
+        >
+          Mi mayor deseo es tu compañía, pero si deseas darme un obsequio,
+          agradezco sea en efectivo.
+        </h5>
+      </div>
+    </section>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      const countdown = () => {
+        const countDate = new Date('Julio 06, 2024 18:30:00').getTime();
+        const now = new Date().getTime();
+        const gap = countDate - now;
+        
+        const second = 1000;
+        const minute = second * 60;
+        const hour = minute * 60;
+        const day = hour * 24;
+
+        const textDay = Math.floor(gap / day);
+        const textHour = Math.floor((gap % day) / hour);
+        const textMinute = Math.floor((gap % hour) / minute);
+        const textSecond = Math.floor((gap % minute) / second);
+
+        document.getElementById('countdown').innerHTML = `${textDay} días ${textHour} horas ${textMinute} minutos ${textSecond} segundos`;
+      };
+
+      setInterval(countdown, 1000);
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var video = document.querySelector('.bg-video');
+        video.playbackRate = 0.5;
+        
+        var audio = document.getElementById('background-audio');
+        audio.play();
+        
+      });
+    </script>
+  </body>
+</html>
